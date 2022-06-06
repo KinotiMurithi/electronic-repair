@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height:100vh;
+    width: 100%;
+    background-image:url(download.jpeg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-play-state:running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+    0%{
+        background-image: url(download\ \(1\).jpeg);
+    }20% {
+        background-image: url(download\ \(2\).jpeg);
+
+    }40% {
+        background-image: url(images\ \(1\).jpeg);
+    }60% {
+        background-image: url(images\ \(3\).jpeg);
+
+    } 80% {
+        background-image: url(images\ \(3\).jpeg);
+
+    }100% {
+       background-image: url(images\ \(4\).jpeg);
+    }120%{
+        background-image: url(images\ \(5\).jpeg);
+    }140%{
+        background-image: url(images.jpeg)
+    }
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px 32px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px ;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
